@@ -1,0 +1,201 @@
+/* 
+1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo de caja (Box model) --> margin, border, padding, content
+3. Tipografía --> tipos, tamaños de fuente, etc
+4. Estilos visuales --> box-shadow, border-radius, gradient, etc
+5. Otros --> reglas CSS y más 
+*/
+
+:root{
+    /* colores */
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --black: #282623;
+    --gray: #BABABA;
+    --off-white: #FAF8F7;
+    --white: #fff;
+
+    /* tamaños elementos */
+    --header-heigth: 30.625rem;
+}
+
+/* propiedades generales */
+
+.flex-center{
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body{
+    width: 100vw;
+}
+
+p, a{
+    font-size: 1.4rem;
+}
+
+/* HEADER */
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 1.6rem;
+    background: linear-gradient(207.8deg, var(--warm-black) 16.69%, var(--bitcoin-orange) 100%);
+    
+}
+.header__site-logo{
+    width: 15.1rem;
+    margin: 4.2rem 0 3.6rem 0;
+}
+.header__title{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.header__paragraph{
+    margin: 2.4rem 0 6.1rem 0;
+    color: var(--soft-orange);
+    text-align: center;
+}
+
+.big-button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(var(--header-heigth) - 3.2rem);
+    width: 22.9rem;
+    height: 4.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--warm-black);
+    background: var(--off-white);
+    border-radius: 0.4rem;
+    box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
+}
+
+.big-button__icon{
+    margin-left: 1.4rem;
+    background-image: url(../assets/icons/arrow-option.svg);
+}
+
+/* FIRST SECTION */
+.exchange{
+    background: var(--off-white);
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exchange__image{
+    width: 19.5rem;
+    margin: 6rem 0 4rem 0;
+}
+
+.description__title{
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 2.4rem;
+}
+
+.description__paragraph{
+    text-align: center;
+    margin-bottom: 4.8rem;
+}
+
+.carousel{
+    width: calc(100% - 3rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6.4rem;
+}
+
+.carousel__preview{
+    width: 0.74rem;
+    display: none;
+}
+
+.carousel__next{
+    width: 0.74rem;
+}
+
+.carousel__element{
+    width: 80%;
+    margin: 0 auto
+}
+
+.carousel__title{
+    color: var(--bitcoin-orange);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+}
+
+.table{
+    background: var(--white);
+    width: 100%;
+    text-align: left;
+    font-size: 1.6rem;
+    color: var(--gray);
+    margin-bottom: 1.6rem;
+}
+
+.table th{
+    padding: 1rem 1.2rem;
+}
+
+.button{
+    width: 99%;
+    align-self: center;
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    background: var(--soft-orange);
+    border-radius: 0.8rem;
+    border: none;
+}
+
+.exchange__separator{
+    width: 3.745rem;
+    position: absolute;
+    top: 109rem
+}
+
+.carousel__element--hidden{
+    display: none;
+}
+
+/* SECOND SECTION */
+
+.carousel__title--blue{
+    color: var(--secondary-blue);
+}
+
+.button--blue{
+    background: var(--soft-blue);
+}
+
+
+
