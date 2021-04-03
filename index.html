@@ -18,7 +18,7 @@
         </header>
         <main>
             <section class= "exchange">
-                <img class="exchange__image" src="./assets/images/bitcoin.svg" alt="bitcoin">
+                <div class="exchange__image" alt="bitcoin"></div>
                 <div class="description">
                     <h2 class="description__title">Visibilizamos todas las tasas de cambio.</h2>
                     <p class="description__paragraph">Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.</p>
@@ -76,55 +76,61 @@
                 </div>
                 <img class="exchange__separator" src="./assets/icons/batata-section.svg" alt="pequeña batata">
             </section>
-            <section>
-                <h1>Creamos un producto sin comparación</h1>
-                <p>Confiable y diseñado para su uso diario</p>
-                <div class="qualities-card">
-                    <img src="" alt="">
-                    <h1>Tiempo real</h1>
-                    <p>Nuestro API toma información minuto a minuto sobre las tasas que más determinan el comportamiento.</p>
+            <section class="product-characters">
+                <div class="description description--dark">
+                    <h2 class="description__title description__title--dark">Creamos un producto sin comparación</h2>
+                    <p class="description__paragraph description__paragraph--dark">Confiable y diseñado para su uso diario</p>
                 </div>
                 <div class="qualities-card">
-                    <img src="" alt="">
-                    <h1>No hay tasas escondidas</h1>
-                    <p>Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
+                    <img class="qualities-card__image" src="./assets/icons/clock.svg" alt="reloj">
+                    <h2 class="qualities-card__title">Tiempo real</h2>
+                    <p class="qualities-card__paragraph">Nuestro API toma información minuto a minuto sobre las tasas que más determinan el comportamiento.</p>
                 </div>
                 <div class="qualities-card">
-                    <img src="" alt="">
-                    <h1>Compara monedas</h1>
-                    <p>Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
+                    <img class="qualities-card__image" src="./assets/icons/eye.svg" alt="ojo">
+                    <h2 class="qualities-card__title">No hay tasas escondidas</h2>
+                    <p class="qualities-card__paragraph">Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
                 </div>
                 <div class="qualities-card">
-                    <img src="" alt="">
-                    <h1>Información confiable</h1>
-                    <p>Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualizan.</p>
+                    <img class="qualities-card__image" src="./assets/icons/dollar-sign.svg" alt="signo_dolar">
+                    <h2 class="qualities-card__title">Compara monedas</h2>
+                    <p class="qualities-card__paragraph">Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
+                </div>
+                <div class="qualities-card">
+                    <img class="qualities-card__image" src="./assets/icons/check-circle.svg" alt="verificado">
+                    <h2 class="qualities-card__title">Información confiable</h2>
+                    <p class="qualities-card__paragraph">Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualizan.</p>
                 </div>
 
             </section>
-            <section>
-                <div>
-                    <h1>Conócelo hoy</h1>
+            <section class="info-plans">
+                <div class="banner">
+                    <h2 class="banner__title">Conócelo hoy</h2>
                 </div>
-                <div>
-                    <h1>Recomendado</h1>
-                    <h1>Pago Anual</h1>
-                    <h4>*99</h4>
-                    <p>*Ahorras $129 comparado con el plan mensual.</p>
-                    <button>Escoger este</button>
+                <div class="description">
+                    <h2 class="description__title">Escoge el plan que mejor se ajuste a ti.</h2>
+                    <p class="description__paragraph">Cualquier plan te da acceso completo a nuestra plataforma.</p>
                 </div>
-                <div>
-                    <h1>Recomendado</h1>
-                    <h1>Pago Anual</h1>
-                    <h4>*99</h4>
-                    <p>*Ahorras $129 comparado con el plan mensual.</p>
-                    <button>Escoger este</button>
-                </div>
-                <div>
-                    <h1>Recomendado</h1>
-                    <h1>Pago Anual</h1>
-                    <h2>*99</h2>
-                    <p>*Ahorras $129 comparado con el plan mensual.</p>
-                    <button>Escoger este</button>
+                <div class="carousel-price">
+                    <div class="box-price">
+                        <p class="box-price__frequency">Pago Anual</p>
+                        <p class="box-price__price">$<span class="box-price__number">99</span></p>
+                        <p class="box-price__description">*Ahorras $129 comparado con el plan mensual.</p>
+                        <button>Escoger este</button>
+                    </div>
+                    <div class="box-price">
+                        <p class="recommended">Recomendado</p>
+                        <p class="box-price__frequency">Pago Anual</p>
+                        <p class="box-price__price">$<span class="box-price__number">99</span></p>
+                        <p class="box-price__description">*Ahorras $129 comparado con el plan mensual.</p>
+                        <button>Escoger este</button>
+                    </div>
+                    <div class="box-price">
+                        <p class="box-price__frequency">Pago Anual</p>
+                        <p class="box-price__price">$<span class="box-price__number">99</span></p>
+                        <p class="box-price__description">*Ahorras $129 comparado con el plan mensual.</p>
+                        <a class="button-selector" href="#">Escoger este<span class="button-selector__icon"></span></a>
+                    </div>
                 </div>
                 <footer>
                     <ul>
