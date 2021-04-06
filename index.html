@@ -7,14 +7,16 @@
         <meta name="description" content="Proyecto de maquetación web a partir de un diseño previo">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./assets/style.css" dev>
+        <link rel="stylesheet" href="./assets/styles/small.css">
+        <link rel="stylesheet" href="./assets/styles/medium.css" media="screen and (min-width: 618px)">
+        <link rel="stylesheet" href="./assets/styles/large.css" media="screen and (min-width: 800px)">
     </head>
     <body>
         <header class="header">
             <img class="header__site-logo" src="./assets/images/site-logo.svg" alt="batatabit y logo">
             <h1 class="header__title">La próxima revolución en el intercambio de criptomonedas.</h1>
             <p class="header__paragraph">Batabit te ayuda a navegar entre los diferentes precios y tendencias.</p>
-            <a class="big-button" href="">Conoce nuestros planes<span class="big-button__icon"></span></a>
+            <a class="big-button" href="#info-plans">Conoce nuestros planes<span class="big-button__icon"></span></a>
         </header>
         <main>
             <section class= "exchange">
@@ -24,7 +26,7 @@
                     <p class="description__paragraph">Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.</p>
                 </div>
                 <div class="carousel">
-                    <button id="preview" type="button" class="carousel__button carousel__element--hidden"><img src="./assets/icons/preview.svg" alt="preview"></img></button>
+                    <button id="preview" type="button" class="carousel__button carousel__button--preview carousel__element--hidden"><img src="./assets/icons/preview.svg" alt="preview"></img></button>
                     <div id="coins" class="carousel__element">
                         <h2 class="carousel__title">Monedas</h2>
                         <table class="table">
@@ -72,7 +74,7 @@
                         </table>
                         <button class="button button--blue"><strong>Actualizado: </strong>19 de julio 23:48</button>
                     </div>  
-                    <button id="next" type="button" class="carousel__button"><img src="./assets/icons/next.svg" alt="next"></img></button>
+                    <button id="next" type="button" class="carousel__button carousel__button--next"><img src="./assets/icons/next.svg" alt="next"></img></button>
                 </div>
                 <img class="exchange__separator" src="./assets/icons/batata-section.svg" alt="pequeña batata">
             </section>
@@ -81,28 +83,31 @@
                     <h2 class="description__title description__title--dark">Creamos un producto sin comparación</h2>
                     <p class="description__paragraph description__paragraph--dark">Confiable y diseñado para su uso diario</p>
                 </div>
-                <div class="qualities-card">
-                    <img class="qualities-card__image" src="./assets/icons/clock.svg" alt="reloj">
-                    <h2 class="qualities-card__title">Tiempo real</h2>
-                    <p class="qualities-card__paragraph">Nuestro API toma información minuto a minuto sobre las tasas que más determinan el comportamiento.</p>
-                </div>
-                <div class="qualities-card">
-                    <img class="qualities-card__image" src="./assets/icons/eye.svg" alt="ojo">
-                    <h2 class="qualities-card__title">No hay tasas escondidas</h2>
-                    <p class="qualities-card__paragraph">Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
-                </div>
-                <div class="qualities-card">
-                    <img class="qualities-card__image" src="./assets/icons/dollar-sign.svg" alt="signo_dolar">
-                    <h2 class="qualities-card__title">Compara monedas</h2>
-                    <p class="qualities-card__paragraph">Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
-                </div>
-                <div class="qualities-card">
-                    <img class="qualities-card__image" src="./assets/icons/check-circle.svg" alt="verificado">
-                    <h2 class="qualities-card__title">Información confiable</h2>
-                    <p class="qualities-card__paragraph">Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualizan.</p>
+                <div class="product-characters__qualities">
+                    <div class="qualities-card">
+                        <img class="qualities-card__image" src="./assets/icons/clock.svg" alt="reloj">
+                        <h2 class="qualities-card__title">Tiempo real</h2>
+                        <p class="qualities-card__paragraph">Nuestro API toma información minuto a minuto sobre las tasas que más determinan el comportamiento.</p>
+                    </div>
+                    <div class="qualities-card">
+                        <img class="qualities-card__image" src="./assets/icons/eye.svg" alt="ojo">
+                        <h2 class="qualities-card__title">No hay tasas escondidas</h2>
+                        <p class="qualities-card__paragraph">Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
+                    </div>
+                    <div class="qualities-card">
+                        <img class="qualities-card__image" src="./assets/icons/dollar-sign.svg" alt="signo_dolar">
+                        <h2 class="qualities-card__title">Compara monedas</h2>
+                        <p class="qualities-card__paragraph">Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
+                    </div>
+                    <div class="qualities-card">
+                        <img class="qualities-card__image" src="./assets/icons/check-circle.svg" alt="verificado">
+                        <h2 class="qualities-card__title">Información confiable</h2>
+                        <p class="qualities-card__paragraph">Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualizan.</p>
+                    </div>
                 </div>
 
             </section>
+            <a name="info-plans"></a>
             <section class="info-plans">
                 <div class="banner">
                     <h2 class="banner__title">Conócelo hoy</h2>
@@ -111,41 +116,40 @@
                     <h2 class="description__title">Escoge el plan que mejor se ajuste a ti.</h2>
                     <p class="description__paragraph">Cualquier plan te da acceso completo a nuestra plataforma.</p>
                 </div>
-                <div class="carousel-price">
+                <div id="plans" class="carousel-price">
                     <div class="box-price">
-                        <p class="box-price__frequency">Pago Anual</p>
-                        <p class="box-price__price">$<span class="box-price__number">99</span></p>
-                        <p class="box-price__description">*Ahorras $129 comparado con el plan mensual.</p>
-                        <button>Escoger este</button>
+                        <p class="box-price__frequency">Pago Mensual</p>
+                        <p class="box-price__price">$<span class="box-price__number">88</span></p>
+                        <p class="box-price__description">*Decides si renovar el próximo mes.</p>
+                        <button class="button-choice">Escoger este<span class="button-choice__icon"></span></button>
                     </div>
                     <div class="box-price">
                         <p class="recommended">Recomendado</p>
                         <p class="box-price__frequency">Pago Anual</p>
                         <p class="box-price__price">$<span class="box-price__number">99</span></p>
                         <p class="box-price__description">*Ahorras $129 comparado con el plan mensual.</p>
-                        <button>Escoger este</button>
+                        <button class="button-choice">Escoger este<span class="button-choice__icon"></span></button>
                     </div>
                     <div class="box-price">
-                        <p class="box-price__frequency">Pago Anual</p>
-                        <p class="box-price__price">$<span class="box-price__number">99</span></p>
-                        <p class="box-price__description">*Ahorras $129 comparado con el plan mensual.</p>
-                        <a class="button-selector" href="#">Escoger este<span class="button-selector__icon"></span></a>
+                        <p class="box-price__frequency">Anual Premium</p>
+                        <p class="box-price__price">$<span class="box-price__number">120</span></p>
+                        <p class="box-price__description">*Tienes funciones adicionales..</p>
+                        <button class="button-choice">Escoger este<span class="button-choice__icon"></span></button>
                     </div>
                 </div>
-                <footer>
-                    <ul>
-                        <li>Linkedin</li>
-                        <li>Crunchbase</li>
-                        <li>Hackernews</li>
-                    </ul>
-                    <div>
-                        <img src="" alt="">
-                        <p>® Batatabit 2020</p>
-                    </div>
-                </footer>
-
-            </section>
+            </section>           
         </main>
+        <footer class="footer">
+            <ul class="footer__social">
+                <li class="footer__red">Linkedin</li>
+                <li class="footer__red">Crunchbase</li>
+                <li class="footer__red">Hackernews</li>
+            </ul>
+            <div>
+                <span class="footer__logo"></span>
+                <p class="footer__copyrigth">® Batatabit 2020</p>
+            </div>
+        </footer>
         <script src="./assets/main.js"></script>
     </body>
 </html>

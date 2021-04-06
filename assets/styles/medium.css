@@ -1,0 +1,25 @@
+:root{
+    /* tamaños elementos */
+    --box-width: 40rem;
+}
+
+/* THIRD SECTION */
+
+.banner{
+    background: url(../images/bitcoinbaby.jpg) center repeat-x;
+}
+
+.carousel-price{
+    overflow: hidden ;
+}
+
+/* FOOTER */
+
+.footer__social{
+    display: flex;
+}
+
+.footer__red{
+    margin: 0 1rem;
+}
+

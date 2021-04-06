@@ -1,9 +1,9 @@
 /* 
-1. Posicionamiento --> static, absolute, relative, fixed
-2. Modelo de caja (Box model) --> margin, border, padding, content
-3. Tipografía --> tipos, tamaños de fuente, etc
-4. Estilos visuales --> box-shadow, border-radius, gradient, etc
-5. Otros --> reglas CSS y más 
+1. Propiedades de maquetación de página (position, float, clear, display)
+2. Propiedades del box model (width, height, margin, padding)
+3. Propiedades visuales (color, background, border, box-shadow)
+4. Propiedades tipográficas (font-size, font-family, text-align, text-transform)
+5. Propiedades misceláneas (cursor, overflow)
 */
 
 :root{
@@ -20,7 +20,6 @@
     --white: #fff;
 
     /* tamaños elementos */
-    --header-heigth: 30.625rem;
     --box-width: 28.8rem;
 }
 
@@ -33,21 +32,22 @@
 }
 
 html{
-    font-size: 62.5%;
-    font-family: 'DM Sans', sans-serif;
+    font: 62.5% 'DM Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
     width: 100vw;
 }
 
-p, a{
+p, a, li{
     font-size: 1.4rem;
 }
 
 /* HEADER */
 
 .header{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,6 +56,7 @@ p, a{
     padding: 0 1.6rem;
     background: linear-gradient(207.8deg, var(--warm-black) 16.69%, var(--bitcoin-orange) 100%);
     
+    
 }
 .header__site-logo{
     width: 15.1rem;
@@ -63,11 +64,11 @@ p, a{
 }
 .header__title{
     width: var(--box-width);
+    color: var(--white);
     font-size: 2.4rem;
     font-weight: bold;
     line-height: 2.6rem;
     text-align: center;
-    color: var(--white);
 }
 
 .header__paragraph{
@@ -78,47 +79,52 @@ p, a{
 }
 
 .big-button{
-    display: inline-flex;
+    position: absolute;
+    bottom: -2.4rem;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: calc(var(--header-heigth) - 3.2rem);
     width: 22.9rem;
     height: 4.8rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--warm-black);
     background: var(--off-white);
     border-radius: 0.4rem;
     box-shadow: 0rem 0.4rem 0.8rem rgba(89, 73, 30, 0.16);
+    color: var(--warm-black);
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .big-button__icon{
+    display: inline-block;
+    width: 1.2rem;
+    height: 0.8rem;
     margin-left: 1.4rem;
-    background-image: url(../assets/icons/arrow-option.svg);
+    background-image: url(../icons/arrow-option.svg);
 }
 
 /* MAIN */
 
 main{
-    background: var(--off-white);
     width: 100%;
+    padding-bottom: 2rem;
+    background-color: var(--off-white);
 }
 
 /* FIRST SECTION */
 .exchange{
-    padding: 0 1.5rem;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 1.5rem;    
 }
 
 .exchange__image{
     width: 19.5rem;
     height: 19.5rem;
     margin: 6rem 0 4rem 0;
-    background: url("./images/bitcoin.svg") center/cover no-repeat;
+    background: url(../images/bitcoin.svg) center/cover no-repeat;
 }
 
 .description{
@@ -127,51 +133,65 @@ main{
 }
 
 .description__title{
-    text-align: center;
+    margin-bottom: 2.4rem;
     font-size: 2.4rem;
     font-weight: bold;
-    margin-bottom: 2.4rem;
+    text-align: center;
 }
 
 .description__paragraph{
-    text-align: center;
     margin-bottom: 4.8rem;
+    text-align: center;
 }
 
 .carousel{
-    width: var(--box-width);
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: var(--box-width);
+    height: 200px;
     margin-bottom: 6.4rem;
 }
 
 .carousel__button{
+    position: absolute;
     width: 0.74rem;
     border: none;
     background: none;
 }
 
+.carousel__button--preview{
+    left: 1rem;
+}
+
+.carousel__button--next{
+    right: 1rem;
+}
+
 .carousel__element{
+    position: absolute;
     width: 80%;
-    margin: 0 auto
+    margin: auto;
+    opacity: 1;
+    transition: all 0.5s;
 }
 
 .carousel__title{
+    margin-bottom: 1.2rem;
     color: var(--bitcoin-orange);
     font-size: 1.8rem;
     font-weight: bold;
-    margin-bottom: 1.2rem;
 }
 
 .table{
-    background: var(--white);
     width: 100%;
+    margin-bottom: 1.6rem;
+    background: var(--white);
+    color: var(--gray);
     text-align: left;
     font-family: 'inter';
-    font-size: 1.6rem;
-    color: var(--gray);
-    margin-bottom: 1.6rem;
+    font-size: 1.6rem;    
 }
 
 .table td{
@@ -179,9 +199,9 @@ main{
 }
 
 .table__column-rigth{
-    color: var(--fort-gray);
     display: flex;
     justify-content: space-between;
+    color: var(--fort-gray);
 }
 
 .table__icon{
@@ -190,32 +210,31 @@ main{
 }
 
 .table__icon--up{
-    background-image: url(../assets/icons/trending-up.svg);
+    background-image: url(../icons/trending-up.svg);
 }
 
 .table__icon--down{
-    background-image: url(../assets/icons/trending-down.svg);
+    background-image: url(../icons/trending-down.svg);
 }
 
 .button{
     width: 99%;
-    align-self: center;
-    font-family: 'inter';
-    font-size: 1.2rem;
     padding: 0.8rem;
     background: var(--soft-orange);
     border-radius: 0.8rem;
     border: none;
+    font-family: 'inter';
+    font-size: 1.2rem;
 }
 
 .exchange__separator{
-    width: 3.745rem;
     position: absolute;
-    top: 109rem
+    bottom: -1.1rem;
+    width: 3.745rem;
 }
 
 .carousel__element--hidden{
-    display: none;
+    opacity: 0;
 }
 
 .carousel__title--blue{
@@ -229,8 +248,8 @@ main{
 /* SECOND SECTION */
 
 .product-characters{
-    background-color: var(--warm-black);
     padding: 6.4rem 0 4.6rem 0;
+    background-color: var(--warm-black);
 }
 
 .description__title--dark{
@@ -242,10 +261,10 @@ main{
 }
 
 .qualities-card{
-    background-color: var(--black);
-    width: 28.8rem;
+    width: var(--box-width);
     margin: 0 auto 1.6rem auto;
     padding: 1.6rem 2rem 2.2rem 1.6rem;
+    background-color: var(--black);
 }
 
 .qualities-card__image{
@@ -255,25 +274,24 @@ main{
 }
 
 .qualities-card__title{
+    margin-bottom: 1.2rem;
     color: var(--white);
     font-size: 1.8rem;
     font-weight: bold;
-    margin-bottom: 1.2rem;
 }
 
 .qualities-card__paragraph{
-    color: var(--white);
     color: var(--fort-gray);
 }
 
 /* THIRD SECTION */
 
 .banner{
-    padding-top: 6.5rem;
-    margin-bottom: 6.4rem;
     width: 100%;
     height: 38.7rem;
-    background: url("./images/bitcoinbaby.jpg") center/cover no-repeat;
+    padding-top: 6.5rem;
+    margin-bottom: 6.4rem;
+    background: url(../images/bitcoinbaby.jpg) center/cover no-repeat;
 }
 .banner__title{
     color: var(--white);
@@ -284,35 +302,41 @@ main{
 
 .carousel-price{
     display: flex;
-    justify-content: center; 
+    max-width: 61.8rem;
+    height: 29rem;
+    margin: 0 auto 0 auto;
+    overflow: scroll;
 }
 
 .box-price{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 19rem;
-    margin: 0 0.8rem;
-    background-color: var(--white);
-    position: relative;
+    height: 24.7rem;
+    margin: 1.6rem 0.8rem 0 0.8rem;
+    padding: 3.1rem 0 2.4rem 0;
+    background-color: var(--white);   
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
 }
 
 .recommended{
+    position: absolute;
+    top: -1.525rem;
     width: 10.1rem;
     height: 3.1rem;
     padding: 0.8rem;
     background-color: var(--bitcoin-orange);
+    border-radius: 0.8rem;
     color: var(--white);
     font-size: 1.2rem;
     font-weight: bold;
     text-align: center;
-    border-radius: 0.8rem;
-    position: absolute;
-    top: -1.525rem;
 }
 
 .box-price__frequency{
-    margin: 3.1rem 0 0.8rem 0;
+    margin-bottom: 0.8rem;
 }
 
 .box-price__price{
@@ -321,4 +345,60 @@ main{
 }
 .box-price__number{
     font: bold 5.2rem 'inter';
+}
+
+.box-price__description{
+    width: 15.8rem;
+    margin-bottom: 1.6rem;
+    font: 1.2rem 'inter';
+    color: var(--fort-gray);
+    text-align: center;
+}
+
+.button-choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15.1rem;
+    height: 4.8rem;
+    background-color: var(--off-white);
+    border: var(--bitcoin-orange) solid;
+    border-radius: 0.4rem;
+    color: var(--warm-black);
+}
+.button-choice__icon{
+    width: 1.8rem;
+    height: 1.8rem;
+    display: inline-block;
+    margin-left: 1.3rem;
+    background: url(../icons/arrow-right.svg) center/cover no-repeat;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 4rem 6.5rem;
+    background-color: var(--bitcoin-orange);
+    color: var(--white);
+}
+
+.footer__social{
+    list-style: none;
+}
+
+.footer__red{
+    margin-bottom: 0.8rem;
+}
+
+.footer__copyrigth{
+    font-size: 0.8rem;
+}
+
+.footer__logo{
+    display: block;
+    width: 4rem;
+    height: 2.4rem;
+    margin: 0 auto 0.8rem auto;
+    background-image: url(../icons/batata-footer.svg);
 }

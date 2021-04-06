@@ -1,0 +1,49 @@
+:root{
+    /* tamaños elementos */
+    --box-width: 28.8rem;
+}
+
+main{
+    max-width: 95rem;
+    margin: auto;
+}
+
+/* FIRST PART  */
+
+.carousel{
+    width: 100%;
+}
+
+.carousel__element{
+    position: relative;
+    width: 40%;    
+    margin: 0 2rem 1rem 2rem;
+    opacity: 1;
+}
+
+.carousel__button{
+    display: none;
+}
+
+/* SECOND PART */
+
+.product-characters__qualities{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80rem;
+    margin: auto;
+}
+
+/* THIRD SECTION */
+
+.banner{
+    background: url(../images/bitcoinbaby.jpg) center repeat-x;
+}
+
+.carousel-price{
+    overflow: hidden ;
+}
+
+
+
+
