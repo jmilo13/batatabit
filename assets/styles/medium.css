@@ -5,12 +5,8 @@
 
 /* THIRD SECTION */
 
-.banner{
-    background: url(../images/bitcoinbaby.jpg) center repeat-x;
-}
-
 .carousel-price{
-    overflow: hidden ;
+    overflow-x: hidden ;
 }
 
 /* FOOTER */

@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Batatabit</title>
         <meta name="description" content="Proyecto de maquetación web a partir de un diseño previo">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./assets/styles/small.css">
         <link rel="stylesheet" href="./assets/styles/medium.css" media="screen and (min-width: 618px)">
         <link rel="stylesheet" href="./assets/styles/large.css" media="screen and (min-width: 800px)">
+        <script defer src="./assets/main.js"></script>
     </head>
     <body>
         <header class="header">
@@ -32,25 +32,25 @@
                         <table class="table">
                             <tr>
                                 <td>Bitcoin</td>
-                                <td class="table__column-rigth">$1.96<img src="./assets/icons/trending-down.svg" class="table__icon table__icon--down"></img></td>
+                                <td class="table__column-rigth">$1.96<img src="./assets/icons/trending-down.svg" alt="bajó" class="table__icon"></img></td>
                                 
                             </tr>
                             <tr>
                                 <td>Ethereum</td>
-                                <td class="table__column-rigth">$0.07<img src="./assets/icons/trending-up.svg" class="table__icon table__icon--up"></img></td>
+                                <td class="table__column-rigth">$0.07<img src="./assets/icons/trending-up.svg" alt="subió" class="table__icon"></img></td>
                                 
                             </tr>
                             <tr>
                                 <td>Ripple</td>
-                                <td class="table__column-rigth">$2.15<img src="./assets/icons/trending-down.svg" class="table__icon table__icon--down"></img></td>
+                                <td class="table__column-rigth">$2.15<img src="./assets/icons/trending-down.svg" alt="bajó" class="table__icon"></img></td>
                             </tr>
                             <tr>
                                 <td>Stellar</td>
-                                <td class="table__column-rigth">$4.96<img src="./assets/icons/trending-down.svg" class="table__icon table__icon--down"></img></td>
+                                <td class="table__column-rigth">$4.96<img src="./assets/icons/trending-down.svg" alt="bajó" class="table__icon"></img></td>
                                 
                             </tr>
                         </table>
-                        <button class="button"><strong>Actualizado: </strong>19 de julio 23:48</button>
+                        <p class="carousel-update"><strong>Actualizado: </strong>19 de julio 23:48</p>
                     </div>
                     <div id="comissions" class="carousel__element carousel__element--hidden">
                         <h2 class="carousel__title carousel__title--blue">Comisiones</h2>
@@ -72,11 +72,11 @@
                                 <td class="table__column-rigth">$14.96</td>
                             </tr>
                         </table>
-                        <button class="button button--blue"><strong>Actualizado: </strong>19 de julio 23:48</button>
+                        <p class="carousel-update carousel-update--blue"><strong>Actualizado: </strong>19 de julio 23:48</p>
                     </div>  
                     <button id="next" type="button" class="carousel__button carousel__button--next"><img src="./assets/icons/next.svg" alt="next"></img></button>
                 </div>
-                <img class="exchange__separator" src="./assets/icons/batata-section.svg" alt="pequeña batata">
+                <span class="exchange__separator"></span>
             </section>
             <section class="product-characters">
                 <div class="description description--dark">
@@ -85,22 +85,22 @@
                 </div>
                 <div class="product-characters__qualities">
                     <div class="qualities-card">
-                        <img class="qualities-card__image" src="./assets/icons/clock.svg" alt="reloj">
+                        <span class="qualities-card__image qualities-card__image--clock"></span>
                         <h2 class="qualities-card__title">Tiempo real</h2>
                         <p class="qualities-card__paragraph">Nuestro API toma información minuto a minuto sobre las tasas que más determinan el comportamiento.</p>
                     </div>
                     <div class="qualities-card">
-                        <img class="qualities-card__image" src="./assets/icons/eye.svg" alt="ojo">
+                        <span class="qualities-card__image qualities-card__image--eye"></span>
                         <h2 class="qualities-card__title">No hay tasas escondidas</h2>
                         <p class="qualities-card__paragraph">Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
                     </div>
                     <div class="qualities-card">
-                        <img class="qualities-card__image" src="./assets/icons/dollar-sign.svg" alt="signo_dolar">
+                        <span class="qualities-card__image qualities-card__image--dollar"></span>
                         <h2 class="qualities-card__title">Compara monedas</h2>
                         <p class="qualities-card__paragraph">Ni en la compra o al momento de exit, Batabit siempre te muestra el costo real de lo que estás adquiriendo.</p>
                     </div>
                     <div class="qualities-card">
-                        <img class="qualities-card__image" src="./assets/icons/check-circle.svg" alt="verificado">
+                        <span class="qualities-card__image qualities-card__image--check"></span>
                         <h2 class="qualities-card__title">Información confiable</h2>
                         <p class="qualities-card__paragraph">Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualizan.</p>
                     </div>
@@ -117,25 +117,25 @@
                     <p class="description__paragraph">Cualquier plan te da acceso completo a nuestra plataforma.</p>
                 </div>
                 <div id="plans" class="carousel-price">
-                    <div class="box-price">
+                    <article class="box-price">
                         <p class="box-price__frequency">Pago Mensual</p>
                         <p class="box-price__price">$<span class="box-price__number">88</span></p>
                         <p class="box-price__description">*Decides si renovar el próximo mes.</p>
                         <button class="button-choice">Escoger este<span class="button-choice__icon"></span></button>
-                    </div>
-                    <div class="box-price">
+                    </article>
+                    <article class="box-price">
                         <p class="recommended">Recomendado</p>
                         <p class="box-price__frequency">Pago Anual</p>
                         <p class="box-price__price">$<span class="box-price__number">99</span></p>
                         <p class="box-price__description">*Ahorras $129 comparado con el plan mensual.</p>
                         <button class="button-choice">Escoger este<span class="button-choice__icon"></span></button>
-                    </div>
-                    <div class="box-price">
+                    </article>
+                    <article class="box-price">
                         <p class="box-price__frequency">Anual Premium</p>
                         <p class="box-price__price">$<span class="box-price__number">120</span></p>
                         <p class="box-price__description">*Tienes funciones adicionales..</p>
                         <button class="button-choice">Escoger este<span class="button-choice__icon"></span></button>
-                    </div>
+                    </article>
                 </div>
             </section>           
         </main>
@@ -150,6 +150,5 @@
                 <p class="footer__copyrigth">® Batatabit 2020</p>
             </div>
         </footer>
-        <script src="./assets/main.js"></script>
     </body>
 </html>
